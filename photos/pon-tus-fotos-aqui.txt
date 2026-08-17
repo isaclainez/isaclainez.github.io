@@ -1,0 +1,14 @@
+Pon aquí tus fotos.
+
+photography.html espera 6 archivos llamados:
+  photo-1.jpg
+  photo-2.jpg
+  photo-3.jpg
+  photo-4.jpg
+  photo-5.jpg
+  photo-6.jpg
+
+Puedes usar tus propios nombres de archivo, solo edita el atributo
+src="photos/photo-1.jpg" en photography.html para que coincida.
+
+Borra este archivo .txt cuando ya no lo necesites.

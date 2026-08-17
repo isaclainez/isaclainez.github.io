@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isac Lainez — photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-nebula" aria-hidden="true"></div>
+<div class="bg-stars" aria-hidden="true"></div>
+
+<div class="page">
+  <div class="frame">
+
+    <div class="masthead">
+      <svg class="spike s1" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0 L23 17 L40 20 L23 23 L20 40 L17 23 L0 20 L17 17 Z" fill="currentColor"/></svg>
+      <svg class="spike s2" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0 L23 17 L40 20 L23 23 L20 40 L17 23 L0 20 L17 17 Z" fill="currentColor"/></svg>
+      <svg class="spike s3" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0 L23 17 L40 20 L23 23 L20 40 L17 23 L0 20 L17 17 Z" fill="currentColor"/></svg>
+      <p class="local-time">your local time — <span id="localTime">--:--:--</span></p>
+      <p class="wordmark">
+        <a class="wordmark-link" href="index.html" aria-label="Photo Gallery — home">Photo Gallery</a>
+      </p>
+    </div>
+
+    <div class="wrap" style="grid-template-columns:1fr;">
+
+      <main>
+        <div class="main-box">
+
+          <section id="photography">
+            <h2>Photography</h2>
+            <p style="max-width:none;">
+              A running collection of shots from wherever I happen to be. Hikes, 
+              night skies, the occasional city street, and anything else that catches my eye. 
+              Nothing professional, just moments I wanted to capture. Click any photo to see it full size.
+            </p>
+          </section>
+
+          <section id="gallery" aria-label="photo gallery">
+            <div class="wrapper">
+
+              <div class="item">
+                <button popovertarget="photo1">
+                  <figure class="polaroid">
+                    <img src="photos/tela_space-2.jpg" alt="Tela, Honduras — October 14, 2023" loading="lazy">
+                    <figcaption class="caption">Tela, Honduras — October 14, 2023</figcaption>
+                  </figure>
+                </button>
+              </div>
+
+              <div class="item">
+                <button popovertarget="photo2">
+                  <figure class="polaroid">
+                    <img src="photos/vla.jpg" alt="NM, USA — June 4, 2026" loading="lazy">
+                    <figcaption class="caption">NM, USA — June 4, 2026</figcaption>
+                  </figure>
+                </button>
+              </div>
+
+              <div class="item">
+                <button popovertarget="photo3">
+                  <figure class="polaroid">
+                    <img src="photos/gbt.jpg" alt="Green Bank, WV — June 2, 2025" loading="lazy">
+                    <figcaption class="caption">Green Bank, WV — June 2, 2025</figcaption>
+                  </figure>
+                </button>
+              </div>
+
+              <div class="item">
+                <button popovertarget="photo4">
+                  <figure class="polaroid">
+                    <img src="photos/bermudas.jpg" alt="Describe this photo — where and what it is" loading="lazy">
+                    <figcaption class="caption">caption — location, date, or a short note</figcaption>
+                  </figure>
+                </button>
+              </div>
+
+              <div class="item">
+                <button popovertarget="photo5">
+                  <figure class="polaroid">
+                    <img src="photos/milkyway.jpg" alt="Describe this photo — where and what it is" loading="lazy">
+                    <figcaption class="caption">caption — location, date, or a short note</figcaption>
+                  </figure>
+                </button>
+              </div>
+
+              <div class="item">
+                <button popovertarget="photo6">
+                  <figure class="polaroid">
+                    <img src="photos/playa.jpg" alt="Describe this photo — where and what it is" loading="lazy">
+                    <figcaption class="caption">caption — location, date, or a short note</figcaption>
+                  </figure>
+                </button>
+              </div>
+
+            </div>
+
+            <div class="popovers">
+              <figure popover id="photo1">
+                <button class="popover-close" popovertarget="photo1" popovertargetaction="hide" aria-label="Close">×</button>
+                <img src="photos/tela_space-2.jpg" alt="Tela, Honduras 14 October 2023">
+                <figcaption>This picture was taken on the beach in Tela, Honduras, on October 14, 2023, after the annular eclipse.</figcaption>
+              </figure>
+              <figure popover id="photo2">
+                <button class="popover-close" popovertarget="photo2" popovertargetaction="hide" aria-label="Close">×</button>
+                <img src="photos/vla.jpg" alt="NM, USA — June 4, 2026">
+                <figcaption>This is the array in New Mexico, with the antennas visible in the distance.</figcaption>
+              </figure>
+              <figure popover id="photo3">
+                <button class="popover-close" popovertarget="photo3" popovertargetaction="hide" aria-label="Close">×</button>
+                <img src="photos/gbt.jpg" alt="Green Bank, WV — June 2, 2025">
+                <figcaption>The 100-meter Robert C. Byrd Green Bank Telescope at the Green Bank Observatory in West Virginia.</figcaption>
+              </figure>
+              <figure popover id="photo4">
+                <button class="popover-close" popovertarget="photo4" popovertargetaction="hide" aria-label="Close">×</button>
+                <img src="photos/bermudas.jpg" alt="Describe this photo — where and what it is">
+                <figcaption>caption — location, date, or a short note</figcaption>
+              </figure>
+              <figure popover id="photo5">
+                <button class="popover-close" popovertarget="photo5" popovertargetaction="hide" aria-label="Close">×</button>
+                <img src="photos/milkyway.jpg" alt="Describe this photo — where and what it is">
+                <figcaption>caption — location, date, or a short note</figcaption>
+              </figure>
+              <figure popover id="photo6">
+                <button class="popover-close" popovertarget="photo6" popovertargetaction="hide" aria-label="Close">×</button>
+                <img src="photos/playa.jpg" alt="Describe this photo — where and what it is">
+                <figcaption>caption — location, date, or a short note</figcaption>
+              </figure>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+    </div>
+
+    <footer>
+      <a href="index.html" class="imgtxt">
+        <img src="photos/Webb_spacecraft_artist_s_impression_pillars_dt Background Removed.png" width = "250" alt="">
+        <span>Home</span>
+      </a>
+    </footer>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
