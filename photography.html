@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title.photo">Photography | Isac Lainez</title>
+<meta name="description" content="Photos of telescopes, night skies and trails by Isac Lainez.">
+<!-- After publishing, change images/social-card.jpg to the full address of the image -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Photography | Isac Lainez">
+<meta property="og:description" content="Telescopes, night skies and trails.">
+<meta property="og:image" content="images/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23060912'/%3E%3Cpath d='M3 21h8l2-13 3 19 2-6h11' fill='none' stroke='%23A7B4FF' stroke-width='2.2' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-space" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">Isac Lainez</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html#research" data-i18n="nav.research">Research</a></li>
+      <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="index.html#publications" data-i18n="nav.publications">Publications</a></li>
+      <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="photography.html" aria-current="page" data-i18n="nav.photography">Photography</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" type="button" data-lang-toggle lang="es" aria-label="Ver en español">ES</button></li>
+      <li><a class="nav-cv" href="files/Isac_Lainez_CV.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+
+  <header class="page-header banner">
+    <h1 data-i18n="nav.photography">Photography</h1>
+    <p data-i18n="photo.intro">
+      A running collection of shots from wherever I happen to be: hikes, night skies, telescopes and
+      anything else that catches my eye. Nothing professional. Select a photo to see it full size.
+    </p>
+  </header>
+
+  <!--
+    To add a photo, copy one <button class="photo"> block.
+    data-meta    = short line shown above the caption (place and date)
+    data-caption = longer text shown in the full-size view
+    Spanish versions of these go in i18n.js (keys photo.N.meta, photo.N.caption, photo.N.alt, photo.N.place)
+  -->
+  <section class="gallery" aria-label="Photo gallery">
+
+    <button class="photo" type="button" data-meta="Tela, Honduras, October 14, 2023"
+            data-caption="Taken on the beach in Tela, Honduras, after the annular eclipse."
+            data-i18n-attrs="data-meta:photo.1.meta,data-caption:photo.1.caption">
+      <img src="images/tela_space-2.jpg" alt="Beach in Tela, Honduras, after the annular eclipse" loading="lazy" data-i18n-attrs="alt:photo.1.alt">
+      <figcaption><small data-i18n="photo.1.date">Oct 14, 2023</small>Tela, Honduras</figcaption>
+    </button>
+
+    <button class="photo" type="button" data-meta="New Mexico, June 4, 2026"
+            data-caption="The Very Large Array in New Mexico, with the antennas visible in the distance."
+            data-i18n-attrs="data-meta:photo.2.meta,data-caption:photo.2.caption">
+      <img src="images/vla.jpg" alt="Antennas of the Very Large Array in New Mexico" loading="lazy" data-i18n-attrs="alt:photo.2.alt">
+      <figcaption><small data-i18n="photo.2.date">Jun 4, 2026</small><span data-i18n="photo.2.place">Very Large Array, New Mexico</span></figcaption>
+    </button>
+
+    <button class="photo" type="button" data-meta="Green Bank, West Virginia, June 2, 2025"
+            data-caption="The 100-meter Robert C. Byrd Green Bank Telescope at the Green Bank Observatory in West Virginia."
+            data-i18n-attrs="data-meta:photo.3.meta,data-caption:photo.3.caption">
+      <img src="images/gbt.jpg" alt="The Green Bank Telescope in West Virginia" loading="lazy" data-i18n-attrs="alt:photo.3.alt">
+      <figcaption><small data-i18n="photo.3.date">Jun 2, 2025</small><span data-i18n="photo.3.place">Green Bank Telescope, West Virginia</span></figcaption>
+    </button>
+
+    <button class="photo" type="button" data-meta="Flight from FL to PR, 2025" data-caption="A scenic flight from Florida to Puerto Rico.">
+      <img src="images/bermudas.jpg" alt="Flight from FL to PR" loading="lazy">
+      <figcaption><small>2025</small>Flight from FL to PR</figcaption>
+    </button>
+
+    <button class="photo" type="button" data-meta="Pitahaya, Puerto Rico, 2024" data-caption="A beautiful sunset over the ocean in Pitahaya.">
+
+      <img src="images/milkyway.jpg" alt="The Milky Way in the night sky" loading="lazy">
+      <figcaption><small>2024</small>Pitahaya, Puerto Rico</figcaption>
+    </button>
+
+    <button class="photo" type="button" data-meta="Playa Sucia, Puerto Rico, 2024" data-caption="A beautiful beach scene in Playa Sucia.">
+      <img src="images/playa.jpg" alt="Playa Sucia, Puerto Rico" loading="lazy">
+      <figcaption><small>2024</small>Playa Sucia, Puerto Rico</figcaption>
+    </button>
+
+  </section>
+
+  <div class="badges" aria-label="Retro web badges">
+    <img src="images/thanks.png" alt="Thanks for visiting badge">
+    <img src="images/underconstruction.png" alt="Under construction badge">
+    <img src="images/whatssupalien.png" alt="Alien badge">
+    <img src="images/oneway.png" alt="One way badge">
+    <img src="images/mindkiller.gif" alt="Fear is the mind-killer badge">
+    <img src="images/amuro.png" alt="Anime badge">
+  </div>
+
+</main>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <img src="" alt="">
+  <div class="lightbox-bar">
+    <p class="lightbox-caption"></p>
+    <div class="lightbox-controls">
+      <button class="round-btn" type="button" data-prev aria-label="Previous photo" data-i18n-attrs="aria-label:ui.prevPhoto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="round-btn" type="button" data-next aria-label="Next photo" data-i18n-attrs="aria-label:ui.nextPhoto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <button class="round-btn" type="button" data-close aria-label="Close" data-i18n-attrs="aria-label:ui.close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</dialog>
+
+<footer class="footer footer-home">
+  <a href="index.html" class="imgtxt">
+    <img src="images/Webb_spacecraft_artist_s_impression_pillars_dt Background Removed.png" width="250" alt="">
+    <span data-i18n="footer.home">Home</span>
+  </a>
+  <p class="footer-copy">© <span data-year>2026</span> Isac Lainez</p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

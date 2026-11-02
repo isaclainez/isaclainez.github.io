@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title.home">Isac Lainez | Physics and Radio Astronomy</title>
+<meta name="description" content="Isac Lainez is a Physics M.S. student at the University of Puerto Rico at Mayagüez studying pulsars with radio telescopes.">
+
+<!-- Link preview card (email, LinkedIn, WhatsApp, Slack).
+     After you publish the site, change images/social-card.jpg to the full address,
+     for example https://isaclainez.com/images/social-card.jpg, so every app can find it. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Isac Lainez | Physics and Radio Astronomy">
+<meta property="og:description" content="Physics M.S. student at UPR Mayagüez studying pulsars with radio telescopes. Applying to Ph.D. programs for fall 2027.">
+<meta property="og:image" content="images/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Isac Lainez, Physics and Radio Astronomy">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23060912'/%3E%3Cpath d='M3 21h8l2-13 3 19 2-6h11' fill='none' stroke='%23A7B4FF' stroke-width='2.2' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Isac Lainez",
+  "jobTitle": "M.S. student in Physics",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Puerto Rico at Mayagüez" },
+  "email": "mailto:isac.lainez@upr.edu",
+  "image": "images/Isac.jpeg"
+}
+</script>
+</head>
+<body>
+
+<div class="bg-space" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">Isac Lainez</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#research" data-i18n="nav.research">Research</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+      <!-- <li><a href="#publications" data-i18n="nav.publications">Publications</a></li> -->
+      <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="photography.html" data-i18n="nav.photography">Photography</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" type="button" data-lang-toggle lang="es" aria-label="Ver en español">ES</button></li>
+      <!-- Put your CV PDF at files/Isac_Lainez_CV.pdf -->
+      <li><a class="nav-cv" href="files/Isac_Lainez_CV.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="banner hero-inner">
+        <div>
+          <h1>Isac Lainez</h1>
+          <p class="hero-lede" data-i18n="hero.lede">
+            Physicist studying <strong>pulsars</strong> with <strong>radio telescopes</strong>.
+            I'm a M.S. student in Physics at the University of Puerto Rico at Mayagüez,
+            applying to Ph.D. programs for fall 2027.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="files/Isac_Lainez_CV.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+              <span data-i18n="hero.cv">Download CV</span>
+            </a>
+            <a class="btn" href="mailto:isac.lainez@upr.edu" data-i18n="hero.email">Email me</a>
+          </div>
+        </div>
+
+        <img class="portrait" src="images/Isac.jpeg" alt="Portrait of Isac Lainez" data-i18n-attrs="alt:hero.portrait">
+
+        <!--
+          The pulse streams at a real pulsar's period.
+          data-period   = rotation period in seconds
+          data-slowdown = how many times slower to show it (use for fast pulsars, 1 = real time)
+          Some options (also update the label text below, and in i18n.js):
+            PSR B1919+21  data-period="1.3373"  data-slowdown="1"   first pulsar discovered (1967)
+            PSR B0329+54  data-period="0.7145"  data-slowdown="1"   brightest pulsar in the northern sky
+            Vela pulsar   data-period="0.0893"  data-slowdown="10"
+            Crab pulsar   data-period="0.0337"  data-slowdown="30"
+        -->
+        <svg class="pulse" data-period="1.3373" data-slowdown="1" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <g class="pulse-track">
+            <path id="pulse-tile" d="M0 64.0 L2 64.1 L4 64.1 L6 64.0 L8 64.2 L10 64.3 L12 63.9 L14 64.4 L16 63.4 L18 66.3 L20 64.3 L22 62.2 L24 63.6 L26 63.1 L28 65.0 L30 64.0 L32 63.3 L34 64.7 L36 65.7 L38 64.1 L40 64.6 L42 64.8 L44 65.0 L46 63.9 L48 63.2 L50 65.3 L52 63.2 L54 63.9 L56 62.4 L58 62.7 L60 63.8 L62 64.4 L64 63.5 L66 63.9 L68 63.0 L70 58.2 L72 45.1 L74 28.8 L76 28.5 L78 44.6 L80 58.0 L82 63.8 L84 66.2 L86 65.3 L88 65.0 L90 64.3 L92 64.8 L94 63.3 L96 65.3 L98 63.4 L100 64.2 L102 65.2 L104 64.3 L106 62.9 L108 63.6 L110 63.7 L112 62.6 L114 64.3 L116 63.6 L118 62.7 L120 63.2 L122 64.4 L124 63.8 L126 63.9 L128 62.6 L130 61.6 L132 61.9 L134 58.9 L136 57.4 L138 62.0 L140 60.3 L142 63.0 L144 63.1 L146 64.9 L148 66.1 L150 63.6 L152 64.1 L154 62.3 L156 64.2 L158 65.6 L160 62.7 L162 63.9 L164 65.2 L166 63.8 L168 62.1 L170 63.4 L172 64.0 L174 64.6 L176 63.4 L178 64.0 L180 64.4 L182 64.6 L184 63.3 L186 63.8 L188 63.5 L190 64.2 L192 63.6 L194 63.5 L196 64.4 L198 62.8 L200 63.0 L202 63.3 L204 63.8 L206 65.1 L208 64.4 L210 63.3 L212 63.6 L214 62.9 L216 63.6 L218 62.3 L220 57.0 L222 39.3 L224 16.8 L226 16.6 L228 38.6 L230 57.0 L232 63.4 L234 64.4 L236 64.7 L238 61.2 L240 64.0 L242 63.4 L244 65.1 L246 63.4 L248 63.3 L250 63.8 L252 63.6 L254 65.0 L256 63.6 L258 63.7 L260 63.4 L262 64.4 L264 65.0 L266 62.4 L268 63.1 L270 63.2 L272 62.8 L274 64.4 L276 63.3 L278 64.2 L280 59.9 L282 59.8 L284 57.7 L286 55.5 L288 58.3 L290 59.8 L292 61.9 L294 62.8 L296 63.5 L298 63.1 L300 64.2 L302 63.1 L304 63.7 L306 62.8 L308 62.1 L310 63.5 L312 63.6 L314 64.1 L316 64.4 L318 65.2 L320 65.2 L322 64.4 L324 63.0 L326 64.3 L328 63.0 L330 65.8 L332 64.8 L334 61.7 L336 62.9 L338 63.8 L340 64.4 L342 65.2 L344 64.8 L346 64.3 L348 63.4 L350 65.2 L352 64.2 L354 63.7 L356 62.4 L358 63.8 L360 64.3 L362 64.6 L364 65.2 L366 62.2 L368 62.0 L370 60.6 L372 46.6 L374 33.3 L376 34.5 L378 48.1 L380 59.2 L382 62.8 L384 65.0 L386 63.8 L388 64.1 L390 63.5 L392 64.6 L394 62.2 L396 64.2 L398 62.7 L400 63.2 L402 64.8 L404 63.5 L406 65.1 L408 64.4 L410 64.4 L412 65.1 L414 63.3 L416 63.1 L418 62.5 L420 65.4 L422 64.5 L424 64.7 L426 63.2 L428 61.4 L430 62.9 L432 63.2 L434 61.3 L436 60.0 L438 61.4 L440 61.3 L442 63.5 L444 64.7 L446 64.3 L448 64.6 L450 64.9 L452 62.9 L454 63.9 L456 64.4 L458 64.7 L460 64.1 L462 63.8 L464 64.4 L466 63.6 L468 65.2 L470 63.4 L472 64.5 L474 63.4 L476 64.4 L478 63.3 L480 64.0 L482 63.5 L484 64.4 L486 63.5 L488 63.8 L490 63.4 L492 64.1 L494 63.2 L496 63.1 L498 65.3 L500 63.9 L502 64.1 L504 65.1 L506 64.2 L508 63.0 L510 64.9 L512 65.4 L514 63.4 L516 63.6 L518 63.5 L520 58.9 L522 45.7 L524 32.1 L526 32.2 L528 46.3 L530 59.4 L532 62.6 L534 62.7 L536 63.5 L538 63.3 L540 63.7 L542 65.4 L544 63.3 L546 64.8 L548 63.9 L550 64.3 L552 64.0 L554 63.5 L556 65.8 L558 63.2 L560 64.5 L562 63.6 L564 64.5 L566 64.1 L568 64.4 L570 63.5 L572 63.1 L574 63.5 L576 63.9 L578 62.1 L580 62.3 L582 62.4 L584 59.0 L586 59.5 L588 60.4 L590 62.6 L592 63.6 L594 63.4 L596 63.8 L598 63.7 L600 63.0 L602 63.5 L604 64.6 L606 64.7 L608 63.6 L610 63.8 L612 64.3 L614 63.2 L616 64.4 L618 63.1 L620 64.5 L622 64.4 L624 63.6 L626 63.4 L628 62.7 L630 62.8 L632 62.7 L634 64.0 L636 64.3 L638 63.3 L640 64.8 L642 65.1 L644 64.8 L646 63.5 L648 63.3 L650 62.7 L652 63.9 L654 63.3 L656 63.8 L658 64.5 L660 64.7 L662 64.9 L664 65.5 L666 64.3 L668 63.6 L670 57.2 L672 39.0 L674 19.3 L676 19.3 L678 39.1 L680 56.0 L682 62.6 L684 63.0 L686 63.6 L688 63.6 L690 63.9 L692 63.9 L694 65.7 L696 63.5 L698 63.8 L700 62.9 L702 64.9 L704 63.4 L706 63.5 L708 61.5 L710 64.7 L712 63.9 L714 63.7 L716 64.0 L718 63.6 L720 65.2 L722 63.9 L724 63.2 L726 62.7 L728 62.4 L730 61.1 L732 58.6 L734 57.6 L736 57.2 L738 59.0 L740 61.7 L742 63.7 L744 64.8 L746 64.1 L748 63.0 L750 63.2 L752 63.8 L754 63.7 L756 63.9 L758 63.5 L760 64.3 L762 63.8 L764 62.8 L766 64.2 L768 64.1 L770 64.1 L772 63.7 L774 63.6 L776 64.6 L778 63.2 L780 63.8 L782 65.2 L784 64.0 L786 63.7 L788 64.6 L790 63.8 L792 63.8 L794 64.1 L796 63.6 L798 65.0 L800 64.3 L802 64.3 L804 63.9 L806 65.2 L808 63.6 L810 63.1 L812 63.9 L814 66.0 L816 64.0 L818 64.0 L820 56.9 L822 39.8 L824 22.0 L826 21.3 L828 40.7 L830 56.7 L832 63.0 L834 63.2 L836 63.9 L838 63.0 L840 63.1 L842 64.5 L844 64.3 L846 65.0 L848 64.6 L850 64.9 L852 64.3 L854 63.8 L856 63.4 L858 64.0 L860 63.6 L862 63.3 L864 62.9 L866 64.5 L868 65.8 L870 64.2 L872 63.9 L874 63.6 L876 63.7 L878 63.4 L880 59.4 L882 58.8 L884 57.8 L886 57.6 L888 59.3 L890 61.6 L892 63.6 L894 63.6 L896 64.1 L898 63.8 L900 64.7 L902 66.0 L904 63.8 L906 63.2 L908 63.7 L910 64.0 L912 64.4 L914 65.0 L916 63.1 L918 65.4 L920 64.7 L922 64.1 L924 63.7 L926 63.0 L928 62.6 L930 62.7 L932 65.1 L934 64.0 L936 63.8 L938 65.0 L940 63.2 L942 63.8 L944 64.9 L946 63.0 L948 64.7 L950 65.0 L952 64.7 L954 64.9 L956 64.0 L958 64.9 L960 64.0 L962 63.7 L964 65.8 L966 64.5 L968 63.5 L970 57.3 L972 42.1 L974 24.6 L976 24.8 L978 44.8 L980 59.7 L982 62.4 L984 64.7 L986 64.0 L988 63.2 L990 64.2 L992 65.8 L994 63.9 L996 64.6 L998 64.5 L1000 64.7 L1002 64.5 L1004 65.1 L1006 62.9 L1008 65.4 L1010 65.2 L1012 64.3 L1014 62.8 L1016 64.0 L1018 64.5 L1020 64.7 L1022 63.1 L1024 63.1 L1026 64.2 L1028 63.2 L1030 63.1 L1032 60.4 L1034 58.7 L1036 58.0 L1038 60.3 L1040 61.2 L1042 61.6 L1044 63.7 L1046 61.8 L1048 63.8 L1050 64.4 L1052 63.9 L1054 61.6 L1056 64.0 L1058 64.3 L1060 65.4 L1062 63.7 L1064 64.2 L1066 63.1 L1068 63.2 L1070 63.2 L1072 64.1 L1074 64.3 L1076 65.2 L1078 64.7 L1080 63.4 L1082 64.5 L1084 63.5 L1086 62.5 L1088 64.1 L1090 64.6 L1092 62.9 L1094 65.2 L1096 62.8 L1098 64.8 L1100 63.4 L1102 65.1 L1104 64.7 L1106 64.4 L1108 65.1 L1110 64.7 L1112 63.1 L1114 62.7 L1116 64.5 L1118 63.4 L1120 55.7 L1122 42.3 L1124 22.6 L1126 22.6 L1128 40.3 L1130 54.9 L1132 64.3 L1134 64.1 L1136 63.9 L1138 64.7 L1140 64.7 L1142 64.0 L1144 63.6 L1146 63.0 L1148 64.4 L1150 64.3 L1152 65.0 L1154 64.5 L1156 65.3 L1158 65.4 L1160 62.3 L1162 63.0 L1164 65.9 L1166 64.6 L1168 62.4 L1170 65.2 L1172 64.9 L1174 63.6 L1176 63.2 L1178 61.9 L1180 61.5 L1182 59.6 L1184 58.3 L1186 57.8 L1188 60.4 L1190 60.8 L1192 62.0 L1194 64.4 L1196 64.5 L1198 62.4 L1200 65.2 L1202 64.7 L1204 63.8 L1206 66.1 L1208 64.0 L1210 63.4 L1212 63.2 L1214 63.8 L1216 63.6 L1218 65.4 L1220 65.2 L1222 65.1 L1224 64.0 L1226 63.0 L1228 65.4 L1230 64.7 L1232 63.0 L1234 64.2 L1236 64.4 L1238 63.0 L1240 64.9 L1242 62.3 L1244 64.3 L1246 64.4 L1248 63.6 L1250 63.5 L1252 63.1 L1254 62.5 L1256 63.7 L1258 63.9 L1260 65.4 L1262 63.2 L1264 62.9 L1266 63.1 L1268 61.0 L1270 60.2 L1272 45.9 L1274 32.6 L1276 30.6 L1278 46.1 L1280 59.9 L1282 62.9 L1284 63.1 L1286 64.1 L1288 63.8 L1290 62.3 L1292 63.9 L1294 64.7 L1296 65.0 L1298 66.2 L1300 62.9 L1302 63.6 L1304 64.0 L1306 64.0 L1308 65.4 L1310 61.8 L1312 64.6 L1314 63.6 L1316 62.6 L1318 64.1 L1320 63.5 L1322 63.4 L1324 63.1 L1326 62.2 L1328 63.5 L1330 61.7 L1332 60.0 L1334 61.0 L1336 58.4 L1338 60.8 L1340 60.8 L1342 64.1 L1344 63.5 L1346 65.1 L1348 64.6 L1350 63.7 L1352 65.0 L1354 63.2 L1356 65.6 L1358 62.9 L1360 62.7 L1362 65.3 L1364 64.2 L1366 63.6 L1368 65.0 L1370 63.1 L1372 63.3 L1374 64.5 L1376 65.0 L1378 64.8 L1380 64.4 L1382 62.3 L1384 63.9 L1386 64.4 L1388 62.1 L1390 65.3 L1392 63.5 L1394 64.4 L1396 64.8 L1398 63.8 L1400 64.1 L1402 65.2 L1404 64.1 L1406 64.2 L1408 64.6 L1410 63.1 L1412 62.8 L1414 64.2 L1416 63.7 L1418 62.4 L1420 59.0 L1422 44.9 L1424 32.7 L1426 30.7 L1428 46.0 L1430 57.8 L1432 62.7 L1434 64.2 L1436 63.4 L1438 65.1 L1440 63.5 L1442 63.9 L1444 63.6 L1446 63.6 L1448 64.0 L1450 64.7 L1452 64.9 L1454 62.7 L1456 62.3 L1458 63.3 L1460 64.4 L1462 62.6 L1464 64.2 L1466 64.8 L1468 64.1 L1470 63.9 L1472 64.4 L1474 63.7 L1476 64.2 L1478 63.5 L1480 62.6 L1482 60.3 L1484 59.5 L1486 59.3 L1488 60.8 L1490 60.5 L1492 63.0 L1494 63.6 L1496 63.4 L1498 63.8 L1500 65.5 L1502 64.0 L1504 63.8 L1506 62.6 L1508 63.8 L1510 64.5 L1512 64.5 L1514 64.8 L1516 64.1 L1518 65.3 L1520 65.4 L1522 64.6 L1524 63.7 L1526 64.0 L1528 63.8 L1530 64.7 L1532 64.0 L1534 64.8 L1536 63.9 L1538 65.1 L1540 63.3 L1542 64.5 L1544 64.1 L1546 62.0 L1548 64.3 L1550 63.5 L1552 62.4 L1554 64.3 L1556 62.5 L1558 62.5 L1560 63.5 L1562 64.1 L1564 64.1 L1566 64.7 L1568 62.2 L1570 57.2 L1572 40.0 L1574 20.4 L1576 19.7 L1578 40.5 L1580 57.4 L1582 62.4 L1584 64.0 L1586 63.6 L1588 64.1 L1590 64.0 L1592 63.7 L1594 63.9 L1596 65.1 L1598 65.9 L1600 65.8 L1602 64.2 L1604 64.4 L1606 65.1 L1608 63.5 L1610 66.9 L1612 64.2 L1614 64.4 L1616 64.3 L1618 64.2 L1620 65.5 L1622 64.8 L1624 64.1 L1626 62.6 L1628 61.9 L1630 61.4 L1632 60.1 L1634 58.4 L1636 58.9 L1638 58.6 L1640 61.0 L1642 63.8 L1644 63.4 L1646 63.9 L1648 63.2 L1650 64.4 L1652 64.8 L1654 65.7 L1656 63.1 L1658 63.0 L1660 64.3 L1662 64.1 L1664 64.3 L1666 63.8 L1668 65.0 L1670 61.8 L1672 63.8 L1674 65.9 L1676 64.1 L1678 65.5 L1680 63.4 L1682 64.3 L1684 63.8 L1686 63.9 L1688 63.4 L1690 64.9 L1692 63.6 L1694 64.3 L1696 65.0 L1698 63.3 L1700 63.1 L1702 65.1 L1704 62.7 L1706 62.8 L1708 63.6 L1710 64.5 L1712 63.8 L1714 64.2 L1716 65.8 L1718 63.4 L1720 56.7 L1722 44.3 L1724 29.0 L1726 27.9 L1728 44.5 L1730 58.6 L1732 64.2 L1734 64.0 L1736 62.6 L1738 64.1 L1740 64.4 L1742 62.5 L1744 65.1 L1746 63.3 L1748 64.1 L1750 63.8 L1752 63.4 L1754 61.5 L1756 63.5 L1758 64.5 L1760 63.0 L1762 63.9 L1764 64.1 L1766 64.1 L1768 63.5 L1770 65.0 L1772 65.1 L1774 63.6 L1776 63.7 L1778 62.1 L1780 59.8 L1782 62.2 L1784 57.9 L1786 58.8 L1788 61.0 L1790 61.3 L1792 61.8 L1794 63.7 L1796 63.6 L1798 63.8 L1800 64.1 L1802 64.5 L1804 63.5 L1806 63.0 L1808 64.0 L1810 64.1 L1812 64.6 L1814 63.9 L1816 64.3 L1818 63.5 L1820 63.7 L1822 64.3 L1824 62.7 L1826 64.9 L1828 64.6 L1830 63.3 L1832 64.8 L1834 63.7 L1836 62.5 L1838 64.4 L1840 65.5 L1842 63.8 L1844 64.2 L1846 64.0 L1848 64.0 L1850 64.3 L1852 63.7 L1854 65.8 L1856 62.9 L1858 63.9 L1860 63.7 L1862 64.7 L1864 64.3 L1866 65.0 L1868 64.7 L1870 59.5 L1872 45.3 L1874 29.3 L1876 29.1 L1878 45.7 L1880 59.4 L1882 62.9 L1884 63.4 L1886 63.4 L1888 64.4 L1890 63.3 L1892 64.6 L1894 62.9 L1896 63.2 L1898 63.7 L1900 62.3 L1902 64.5 L1904 64.1 L1906 63.8 L1908 64.0 L1910 63.2 L1912 63.6 L1914 62.2 L1916 63.5 L1918 64.9 L1920 63.7 L1922 64.4 L1924 62.5 L1926 64.3 L1928 62.3 L1930 61.0 L1932 59.8 L1934 59.2 L1936 57.7 L1938 60.1 L1940 61.5 L1942 61.9 L1944 63.9 L1946 62.5 L1948 63.8 L1950 65.3 L1952 65.9 L1954 66.5 L1956 65.0 L1958 63.9 L1960 65.7 L1962 65.0 L1964 63.4 L1966 64.1 L1968 63.4 L1970 65.1 L1972 64.0 L1974 62.7 L1976 65.8 L1978 65.2 L1980 63.1 L1982 63.3 L1984 62.6 L1986 61.4 L1988 63.9 L1990 65.4 L1992 64.6 L1994 65.2 L1996 64.5 L1998 64.7 L2000 63.8 L2002 63.4 L2004 64.3 L2006 63.0 L2008 64.3 L2010 64.2 L2012 63.4 L2014 66.1 L2016 62.3 L2018 62.8 L2020 56.3 L2022 37.3 L2024 18.9 L2026 18.1 L2028 39.0 L2030 56.7 L2032 63.4 L2034 63.7 L2036 65.4 L2038 64.1 L2040 63.8 L2042 65.9 L2044 63.8 L2046 64.5 L2048 64.6 L2050 65.1 L2052 63.9 L2054 64.0 L2056 63.8 L2058 63.2 L2060 63.8 L2062 64.1 L2064 63.8 L2066 65.0 L2068 62.3 L2070 62.6 L2072 63.7 L2074 63.1 L2076 62.8 L2078 62.3 L2080 60.3 L2082 59.8 L2084 59.4 L2086 58.2 L2088 59.4 L2090 63.7 L2092 62.8 L2094 63.0 L2096 62.5 L2098 62.1 L2100 64.2 L2102 64.4 L2104 64.1 L2106 64.1 L2108 63.3 L2110 62.8 L2112 63.2 L2114 63.1 L2116 63.1 L2118 62.9 L2120 64.7 L2122 64.5 L2124 63.2 L2126 65.1 L2128 63.3 L2130 65.5 L2132 63.7 L2134 64.2 L2136 63.4 L2138 63.7 L2140 63.8 L2142 64.0 L2144 64.8 L2146 64.5 L2148 64.7 L2150 63.6 L2152 66.0 L2154 65.4 L2156 62.9 L2158 63.6 L2160 63.8 L2162 64.9 L2164 63.4 L2166 63.7 L2168 62.8 L2170 55.4 L2172 38.2 L2174 15.2 L2176 15.1 L2178 37.1 L2180 56.8 L2182 62.6 L2184 63.8 L2186 63.6 L2188 64.1 L2190 63.8 L2192 63.5 L2194 64.4 L2196 63.6 L2198 64.0 L2200 63.7 L2202 64.9 L2204 64.9 L2206 63.2 L2208 64.8 L2210 63.1 L2212 62.8 L2214 64.1 L2216 63.7 L2218 65.5 L2220 62.4 L2222 64.7 L2224 62.6 L2226 63.9 L2228 62.4 L2230 62.0 L2232 60.5 L2234 57.7 L2236 58.0 L2238 56.7 L2240 59.3 L2242 62.1 L2244 63.9 L2246 66.0 L2248 63.1 L2250 63.7 L2252 64.5 L2254 64.6 L2256 63.6 L2258 66.4 L2260 64.6 L2262 65.0 L2264 64.3 L2266 62.9 L2268 63.7 L2270 63.3 L2272 64.9 L2274 64.0 L2276 63.0 L2278 64.9 L2280 64.9 L2282 62.9 L2284 63.6 L2286 64.8 L2288 63.3 L2290 64.6 L2292 63.4 L2294 64.0 L2296 64.2 L2298 62.5 L2300 65.7 L2302 62.8 L2304 64.7 L2306 65.1 L2308 63.0 L2310 64.0 L2312 62.8 L2314 64.1 L2316 65.1 L2318 62.5 L2320 57.3 L2322 42.0 L2324 25.3 L2326 25.5 L2328 43.2 L2330 57.5 L2332 62.0 L2334 63.4 L2336 63.4 L2338 64.1 L2340 65.6 L2342 64.9 L2344 61.5 L2346 63.6 L2348 63.2 L2350 65.5 L2352 63.7 L2354 64.2 L2356 64.5 L2358 63.6 L2360 64.7 L2362 62.2 L2364 64.0 L2366 62.6 L2368 62.0 L2370 63.8 L2372 63.7 L2374 63.6 L2376 63.3 L2378 62.9 L2380 63.6 L2382 62.0 L2384 58.3 L2386 58.5 L2388 59.9 L2390 61.1 L2392 63.1 L2394 63.7 L2396 63.9 L2398 63.8 L2400 64.0"/>
+            <use href="#pulse-tile" x="2400"/>
+          </g>
+        </svg>
+        <p class="pulse-label" data-i18n="pulse.label">
+        </p>
+      </div>
+
+      <dl class="glance">
+        <div>
+          <dt data-i18n="glance.now">Currently</dt>
+          <dd data-i18n="glance.now.v">M.S. in Physics, UPR Mayagüez</dd>
+        </div>
+        <div>
+          <dt data-i18n="glance.research">Research</dt>
+          <dd data-i18n="glance.research.v">Pulsars and radio astronomy</dd>
+        </div>
+        <div>
+          <dt data-i18n="glance.seeking">Looking for</dt>
+          <dd data-i18n="glance.seeking.v">Ph.D. positions starting fall 2027</dd>
+        </div>
+        <div>
+          <dt data-i18n="glance.based">Based in</dt>
+          <dd data-i18n="glance.based.v">Mayagüez, Puerto Rico. Originally from Tegucigalpa, Honduras</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="about.title">About</h2>
+      <div class="prose">
+        <p data-i18n="about.p1">
+          Hello! I'm <strong>Isac Lainez</strong>, a Physics Master's student at the
+          University of Puerto Rico, Mayagüez Campus, where I spend most of my time chasing questions
+          about the universe (and occasionally chasing coffee to survive the process).
+        </p>
+        <p data-i18n="about.p2">
+          I was born and raised in Tegucigalpa, Honduras, and somehow ended up looking at stars,
+          studying physics, and wondering how the universe manages to be both incredibly simple and
+          ridiculously complicated.
+        </p>
+        <p data-i18n="about.p3">
+          Away from equations, code and papers, I'm usually reading, watching movies, hiking, or
+          pretending I know where the trail is going. If you'd like to talk about science, books or
+          movies, <a href="#contact">get in touch</a>.
+        </p>
+        <blockquote data-i18n="about.quote">
+          "The nitrogen in our DNA, the calcium in our teeth, the iron in our blood, the carbon in our
+          apple pies were made in the interiors of collapsing stars. We are made of starstuff."
+          <cite>Carl Sagan, Cosmos</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="research.title">Research</h2>
+      <div>
+        <!-- EDIT: one or two sentences on the big question that drives you -->
+        <p class="lead" data-i18n="research.lead">
+          I use radio observations of pulsars to understand their emission mechanisms.
+        </p>
+
+        <!-- EDIT the text in brackets -->
+        <article class="project">
+          <p class="project-kicker" data-i18n="research.kicker">Current project, M.S. thesis</p>
+          <h3 data-i18n="research.ptitle">Data Analysis Pipeline for Radio Pulsar Processing: 
+            Emission Studies Using Archived Observations from the Arecibo Observatory 12-m Telescope 
+            and the Green Bank Telescope</h3>
+          <p data-i18n="research.pdesc">
+            We use archival observations from the Arecibo Observatory 12-m Telescope, collected between 2022 and 2023, 
+            along with observations from the Green Bank Telescope obtained in 2022. Our goal is to investigate pulsar emission 
+            mechanisms and characterize their variability through the analysis of pulse energies, intensity profiles, 
+            and polarization properties. This study aims to identify variations in emission behavior and gain insight into the 
+            physical processes responsible for pulsar radio emission.
+          </p>
+          <p data-i18n="research.advisor"> Advisors: Dr. Henri Radovan and Dr. Allison Smith </p> <p>University of Puerto Rico at Mayagüez Campus</p>
+          <ul class="tools" aria-label="Tools">
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>Pandas</li>
+            <li>Matplotlib</li>
+            <li>PYPulse</li>
+            <li>PSRCHIVE</li>
+            <li>DSPSR</li>
+            <li>TEMPO2</li>
+          </ul>
+        </article>
+
+        <ul class="interests">
+          <li>
+            <h3 data-i18n="research.i1.t">Pulsar astronomy</h3>
+            <p data-i18n="research.i1.d">Timing and characterizing neutron stars to study their emission mechanics and environments.</p>
+          </li>
+          <li>
+            <h3 data-i18n="research.i2.t">Radio astronomy</h3>
+            <p data-i18n="research.i2.d">Working with data from single-dish telescopes.</p>
+          </li>
+          <li>
+            <h3 data-i18n="research.i3.t">Scientific computing</h3>
+            <p data-i18n="research.i3.d">Building analysis pipelines in Python for large astronomical datasets.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel -->
+  <section id="telescopes" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="tel.title">Telescopes and skies</h2>
+      <p class="carousel-intro" data-i18n="tel.intro">
+        Places that keep me in this field, from the radio telescopes I've visited to the view on the
+        way there. More on the <a href="photography.html">photography page</a>.
+      </p>
+
+      <div class="carousel span-all" aria-roledescription="carousel" aria-label="Telescopes and skies" data-i18n-attrs="aria-label:tel.title">
+        <div class="carousel-track" tabindex="0" aria-live="off">
+
+          <figure class="slide">
+            <img src="images/carousel-gbt.jpg" style="object-position: 50% 55%"
+                 alt="The Green Bank Telescope rising above the trees in a green valley in West Virginia"
+                 data-i18n-attrs="alt:tel.s1.alt">
+            <figcaption>
+              <span class="slide-place" data-i18n="tel.s1.place">Green Bank Observatory, West Virginia, June 2025</span>
+              <span class="slide-title">Green Bank Telescope</span>
+              <p class="slide-text" data-i18n="tel.s1.text">The 100-meter Robert C. Byrd Green Bank Telescope, the largest fully steerable radio telescope in the world, inside the National Radio Quiet Zone.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="images/carousel-vla.jpg" style="object-position: 50% 42%" loading="lazy"
+                 alt="A Very Large Array antenna under a clear blue sky, with more antennas along the horizon"
+                 data-i18n-attrs="alt:tel.s2.alt">
+            <figcaption>
+              <span class="slide-place" data-i18n="tel.s2.place">Plains of San Agustin, New Mexico, June 2026</span>
+              <span class="slide-title">Very Large Array</span>
+              <p class="slide-text" data-i18n="tel.s2.text">Twenty-seven 25-meter antennas spread across the high desert, combined to work as a single radio telescope.</p>
+            </figcaption>
+          </figure>
+
+          <!-- EDIT: add the place and date of this flight -->
+          <figure class="slide">
+            <img src="images/12meter.png" style="object-position: 50% 62%" loading="lazy"
+                 alt="The 12-meter radio telescope at the Arecibo Observatory, with a blue sky and scattered clouds in the background."
+                 data-i18n-attrs="alt:tel.s3.alt">
+            <figcaption>
+              <span class="slide-place" data-i18n="tel.s3.place">Arecibo Observatory, Puerto Rico, July 2026</span>
+              <span class="slide-title" data-i18n="tel.s3.title">12-Meter Radio Telescope</span>
+              <p class="slide-text" data-i18n="tel.s3.text">The 12-meter radio telescope at the Arecibo Observatory, with a blue sky and scattered clouds in the background.</p>
+            </figcaption>
+          </figure>
+
+
+        </div>
+
+        <div class="carousel-bar">
+          <div class="dots"></div>
+          <div class="carousel-controls">
+            <span class="count" aria-hidden="true">1 / 3</span>
+            <button class="round-btn" type="button" data-toggle aria-label="Pause slideshow">
+              <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+              <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+            </button>
+            <button class="round-btn" type="button" data-prev aria-label="Previous slide" data-i18n-attrs="aria-label:ui.prevSlide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="round-btn" type="button" data-next aria-label="Next slide" data-i18n-attrs="aria-label:ui.nextSlide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="exp.title">Education and experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when" data-i18n="exp.1.when">2024 to 2027 (expected)</div>
+          <div>
+            <h3 data-i18n="exp.1.title">M.S. in Physics</h3>
+            <p class="where" data-i18n="exp.1.where">University of Puerto Rico at Mayagüez</p>
+            <p class="detail" data-i18n="exp.1.detail">Research focus: pulsar astronomy. Advisor: Dr. Henri Radovan and Dr. Allison Smith.</p>
+            <p class="detail" data-i18n="exp.1.detail2">Relevant coursework: Classical Mechanics I–II, Quantum Mechanics I–II,
+              Optics, Modern Physics, and Thermodynamics and Statistical Mechanics I–II.</p>
+          </div>
+        </li>
+         <li>
+          <div class="when" data-i18n="exp.2.when">July to August 2026</div>
+          <div>
+            <h3 data-i18n="exp.2.title">2026 Green Bank Graduate Student in Residence</h3>
+            <p class="where" data-i18n="exp.2.where">Green Bank Observatory</p>
+            <p class="detail" data-i18n="exp.2.detail">Developed a pulsar timing module for the 12-m Arecibo Telescope data analysis pipeline.</p>
+            <p class="detail" data-i18n="exp.2.detail">Implemented the Interquartile Range (IQR) method for radio frequency interference (RFI) mitigation in Arecibo 12-m observations.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when" data-i18n="exp.2.when">June to August 2025</div>
+          <div>
+            <h3 data-i18n="exp.2.title">Radiometer Data Analysis of Atmospheric Humidity Variability During Rainfall Events in Western Puerto Rico</h3>
+            <p class="where" data-i18n="exp.2.where">RAICES</p>
+            <p class="detail" data-i18n="exp.2.detail">Acquired and preprocessed radiometer data collected through May 2025, selecting
+              observations from March through September of each year and calculating the <em>water vapor mixing ratio</em>.</p>
+            <p class="detail" data-i18n="exp.2.detail2">Interpolated atmospheric data across hourly intervals (6 AM–8 PM) and pressure
+              levels (1000–400 mb) to calculate the <em>saturation fraction</em> across three atmospheric layers.</p>
+            <p class="detail" data-i18n="exp.2.detail3">Conducted statistical analyses of atmospheric saturation, comparing hourly and
+              vertical variations between rainy and dry days using precipitation data from Mayagüez.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when" data-i18n="exp.3.when">2019 to 2024</div>
+          <div>
+            <h3 data-i18n="exp.3.title">B.S. in Physics</h3>
+            <p class="where" data-i18n="exp.3.where">National Autonomous University of Honduras (UNAH), Tegucigalpa</p>
+            <p class="detail" data-i18n="exp.3.detail">Graduated <em>magna cum laude</em>.</p>
+            <p class="detail" data-i18n="exp.3.detail2">Thesis: <em>Application of Statistical Techniques to Study the Formation of
+              Large-Scale Structure in the Universe</em>. Advisor: Dr. Francisco Linares.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Teaching and outreach — EDIT the text in brackets, copy an <li> to add more -->
+  <section id="teaching" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="teach.title">Teaching and outreach</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when" data-i18n="teach.1.when">Fall 2024 to Fall 2025</div>
+          <div>
+            <h3 data-i18n="teach.1.title">Teaching Assistant</h3>
+            <p class="where" data-i18n="teach.1.where">Physics Laboratory I, University of Puerto Rico at Mayagüez</p>
+            <p class="detail" data-i18n="teach.1.detail">Guided about 72 students per semester through laboratory experiments, helping
+              with experimental procedures and the physics concepts behind them.</p>
+            <p class="detail" data-i18n="teach.1.detail2">Developed teaching materials and laboratory procedures, and supported the
+              professor in planning and running lab sessions.</p>
+            <p class="detail" data-i18n="teach.1.detail3">Evaluated students' laboratory work and gave feedback to strengthen their
+              understanding of physics.</p>
+          </div>
+        </li>
+    
+        <li>
+          <div class="when" data-i18n="teach.2.when">2019 to Present</div>
+          <div>
+            <h3 data-i18n="teach.2.title">Tutor and Teacher Delegate</h3>
+            <p class="where" data-i18n="teach.2.where">Honduran Physics Olympiad Committee, Tegucigalpa, Honduras</p>
+            <p class="detail" data-i18n="teach.2.detail">Prepared students for international physics olympiads through training sessions
+              and mentoring in problem solving, and designed the exam problems used to select the national team.</p>
+            <p class="detail" data-i18n="teach.2.detail2">Represented Honduras as a teacher delegate at the IV, V and VI Central American
+              and Caribbean Physics Olympiads and the XXVI, XXVII and XXVIII Ibero-American Physics Olympiads (2019–2023).</p>
+            <p class="detail" data-i18n="teach.2.detail3">Accompanied and supported the Honduran student delegations throughout each
+              competition, including the virtual editions held from 2020 to 2023.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+<!-- Publications -->
+  <section id="publications" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="pubs.title">Conferences and presentations</h2>
+      <div>
+        <ol class="pubs">
+          <li>
+            <div class="when">2026</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.poster">Poster</span>Development of a Radio Pulsar Data Analysis Pipeline for Pulsar Emission Studies with the Arecibo 12-m Telescope</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla, H. Radovan and A. Smith </b></div>
+              <div class="pub-meta">CARSE, University of Puerto Rico, Mayagüez Campus</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2026</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.talk">Talk</span>Pulsars and Binary Systems: From the Nobel Prize to the Double Pulsar and the Future of Gravitational-Wave Astronomy</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b> </div>
+              <div class="pub-meta"> University of Puerto Rico, Mayagüez Campus</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2026</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.talk">Talk</span>Emission Properties and Variability of Millisecond Pulsars: Observations of PSR J1713+0747 with the Green Bank Telescope and PSR J0437−4715 with the Arecibo 12 m Antenna</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla, H. Radovan and A. Smith</b></div>
+              <div class="pub-meta">Alpha-Cen Meeting and Salvadoran School of Astrophysics, San Salvador, El Salvador</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2026</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.talk">Talk</span><span lang="es">Explorando los púlsares mediante la radioastronomía</span></span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b></div>
+              <div class="pub-meta">School of Physics, National Autonomous University of Honduras, Tegucigalpa, Honduras</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2026</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.poster">Poster</span>Developing a Data Analysis Pipeline for Pulsar Emission: Observations of PSR J0437−4715 and PSR B0833−45 with the Arecibo 12 m Telescope</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla, H. Radovan and A. Smith</b></div>
+              <div class="pub-meta">44th Puerto Rico Interdisciplinary Scientific Meeting, University of Puerto Rico, Río Piedras</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2026</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.poster">Poster</span>Single-Pulse Analysis of the Millisecond Pulsar PSR J1713+0747</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla and H. Radovan</b></div>
+              <div class="pub-meta">41st Interuniversity Mathematical Sciences Research Seminar, University of Puerto Rico, Río Piedras</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2025</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.talk">Talk</span>Pulsars: Fundamentals, Methods of Study, and Scientific Applications</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b></div>
+              <div class="pub-meta">University of Puerto Rico at Mayagüez, Mayagüez Campus</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2024</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.poster">Poster</span>Statistical Techniques for Studying Large-Scale Structure in the Universe</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b></div>
+              <div class="pub-meta">Conference on Physics, Astronomy, Climate Change, and Mathematics, Copán, Honduras</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2023</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.talk">Talk</span>Statistical Techniques for Studying Large-Scale Structure in the Universe</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b></div>
+              <div class="pub-meta">Physics Career Week 2023, Tegucigalpa, Honduras</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2023</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.talk">Talk</span>Investigating the Hubble Constant (<i>H</i><sub>0</sub>) Tension through Alternative Theories of General Relativity</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b></div>
+              <div class="pub-meta">School of Physics Conference, Tegucigalpa, Honduras</div>
+            </div>
+          </li>
+          <li>
+            <div class="when">2020</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.talk">Talk</span>Problem Solving in the III Mesoamerican Physics Olympiad</span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b></div>
+              <div class="pub-meta">Mesoamerican Centre for Theoretical Physics (MCTP), Chiapas, Mexico</div>
+            </div>
+          </li>
+          <!-- PAPER (hidden for now). To show it, delete this line and the closing line below the block.
+          <li>
+            <div class="when" data-i18n="pubs.2.when">In preparation</div>
+            <div>
+              <span class="pub-title"><span class="pub-kind" data-i18n="pubs.paper">Paper</span><span data-i18n="pubs.2.title">[Working paper title]</span></span>
+              <div class="pub-meta"><b>I. S. Lainez Sevilla</b>, [Advisor, A.]</div>
+              <div class="pub-meta" data-i18n="pubs.2.venue">To be submitted to [Journal]</div>
+            </div>
+          </li>
+          -->
+        </ol>
+        <!-- EDIT: replace # with your profile links -->
+         <!-- <p class="profiles"><span data-i18n="pubs.profiles">Full list on</span> <a href="#">NASA ADS</a> <span data-i18n="pubs.and">and</span> <a href="#">ORCID</a>.</p> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills — EDIT: keep what you use, delete the rest, remove the [brackets] -->
+  <section id="skills" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="skills.title">Skills</h2>
+      <dl class="skills">
+        <div>
+          <dt data-i18n="skills.prog">Programming</dt>
+          <dd>
+            <ul class="tools">
+              <li>Python</li><li>NumPy</li><li>SciPy</li><li>Astropy</li><li>Matplotlib</li><li>Bash</li><li>Git</li><li>LaTeX</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt data-i18n="skills.radio">Radio astronomy software</dt>
+          <dd>
+            <ul class="tools">
+              <li>PSRCHIVE</li><li>PRESTO</li><li>DSPSR</li><li>TEMPO2</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt data-i18n="skills.lang">Languages</dt>
+          <dd data-i18n="skills.lang.v">Spanish (native), English (Full Professional Proficiency) and German (Elementary Proficiency)</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- News and now -->
+  <section id="news" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="news.title">News</h2>
+      <div>
+        <div class="news-now">
+          <!-- Newest entries go on top -->
+          <ul class="news">
+            <li><time datetime="2026-11" data-i18n="news.1.date">Nov 2026</time><p data-i18n="news.1">Redesigned this site ahead of Ph.D. applications.</p></li>
+            <li><time datetime="2026-10" data-i18n="news.2.date">Oct 2026</time><p data-i18n="news.2">Rebuilt the homepage.</p></li>
+            <li><time datetime="2026-07" data-i18n="news.2.date">Jul 2026</time><p data-i18n="news.2">Visited the Green Bank Observatory in West Virginia.</p></li>
+            <li><time datetime="2026-07" data-i18n="news.2.date">Jul 2026</time><p data-i18n="news.2">Visited the Arecibo Observatory in Puerto Rico.</p></li>
+            <li><time datetime="2026-06" data-i18n="news.3.date">Jun 2026</time><p data-i18n="news.3">Visited the Very Large Array in New Mexico.</p></li>
+            <li><time datetime="2025-06" data-i18n="news.4.date">Jun 2025</time><p data-i18n="news.4">Visited the Green Bank Observatory in West Virginia.</p></li>
+          </ul>
+
+          <aside class="now" aria-label="What I'm doing now" data-i18n-attrs="aria-label:now.title">
+            <h3 data-i18n="now.title">Right now</h3>
+            <dl>
+              <dt data-i18n="now.reading">Reading</dt><dd data-i18n="now.reading.v">Still Life with Crows</dd>
+              <dt data-i18n="now.listening">Listening</dt><dd data-i18n="now.listening.v">Queens of the Stone Age</dd>
+              <dt data-i18n="now.working">Working on</dt><dd data-i18n="now.working.v">Ph.D. applications and my thesis</dd>
+              <dt data-i18n="now.feeling">Feeling</dt><dd data-i18n="now.feeling.v">Curious</dd>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="elsewhere">
+          <a href="blog.html">
+            <strong>Blog</strong>
+            <span data-i18n="else.blog">Notes on pulsars, grad school, and the path here.</span>
+          </a>
+          <a href="photography.html">
+            <strong data-i18n="nav.photography">Photography</strong>
+            <span data-i18n="else.photo">Telescopes, night skies and trails.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container section-grid">
+      <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+      <div>
+        <a class="email" href="mailto:isac.lainez@upr.edu">isac.lainez@upr.edu</a>
+        <p class="contact-note" data-i18n="contact.note">
+          I'm happy to talk about research, graduate opportunities, the cosmos, books or movies.
+        </p>
+        <!-- EDIT: replace # with your profile links, or delete the ones you don't use -->
+        <ul class="contact-links">
+          <li>
+              <a href="files/Isac_Lainez_CV.pdf" target="_blank" rel="noopener" data-i18n="contact.cv">CV (PDF)</a>
+          </li>
+          <li>
+              <a href="https://github.com/isaclainez" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+              <a href="https://www.linkedin.com/in/isaclainez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+      </ul>
+        <p class="local" data-i18n="contact.local">It's <span id="localTime">--:--</span> in Mayagüez right now.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span data-year>2026</span> Isac Lainez</span>
+    <span data-i18n="footer.dept">Department of Physics, University of Puerto Rico at Mayagüez</span>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
