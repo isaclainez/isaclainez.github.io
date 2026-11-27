@@ -651,7 +651,7 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
 .posters { padding-bottom: 96px; }
 .poster-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
   margin: 0;
   padding: 0;
@@ -681,7 +681,7 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
   text-shadow: none;
 }
 .poster-title + .pub-meta + .pub-meta { margin-bottom: 20px; }   /* keeps a gap above the viewer, which sits at the bottom so each row lines up */
-.poster-viewer.landscape { aspect-ratio: 16 / 10; }
+.poster-viewer.landscape { aspect-ratio: 3 / 4; }
 .poster-viewer object { display: block; width: 100%; height: 100%; }
 .poster-fallback { padding: 28px 20px; color: var(--ink-2); text-align: center; }
 .poster-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
