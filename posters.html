@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n="meta.title.posters">Posters | Isac Lainez</title>
 <meta name="description" content="Conference posters on pulsar emission, radio astronomy and cosmology by Isac Lainez.">
+<meta name="author" content="Isac Lainez">
+<meta name="theme-color" content="#060912">
 <!-- After publishing, change images/social-card.jpg to the full address of the image -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Posters | Isac Lainez">
@@ -20,6 +22,16 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- Icon sprite: defined once, reused by every button -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-open" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g>
+  </symbol>
+  <symbol id="i-download" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></g>
+  </symbol>
+</svg>
 
 <div class="bg-space" aria-hidden="true"></div>
 
@@ -41,7 +53,7 @@
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="main">
 
   <header class="page-header banner">
     <h1 data-i18n="nav.posters">Posters</h1>
@@ -53,10 +65,11 @@
 
   <!--
     TO ADD A POSTER
-    1. Put the PDF in the "Posters" folder (no spaces in the file name is best).
+    1. Put the PDF in the "Posters" folder (no spaces or extra dots in the file name).
     2. Copy one whole <li class="poster-card"> ... </li> block below and paste it at the top (newest first).
-    3. Change the year, title, authors, venue, and the PDF path (it appears 4 times).
+    3. Change the year, title, authors, venue, location and the PDF path (it appears 4 times).
     4. Landscape poster? Use class="poster-viewer landscape" on the viewer.
+    5. Authors: wrap only your own name in <b>.
     The grid has 2 columns. If the number of posters is odd, the last card
     automatically spans both columns, so no extra class is needed.
     Spanish versions of the button text live in i18n.js (keys posters.open / posters.download).
@@ -65,14 +78,14 @@
     <ul class="poster-grid">
 
       <li class="poster-card">
-        <div class="when">2026</div>
+        <div class="when"><time datetime="2026">2026</time></div>
         <div>
-          <span class="poster-title">Development of a Radio Pulsar Data Analysis Pipeline and Single-Pulse Emission Studies of PSR J1713+0747</span>
-          <div class="pub-meta"><b>I. S. Lainez Sevilla, H. Radovan, Michael Lam</b></div>
-          <div class="pub-meta">NANOGrav Fall 2026 Collaboration Meeting, Texas Tech University, Lubbock, TX</div>
+          <h2 class="poster-title">Development of a Radio Pulsar Data Analysis Pipeline and Single-Pulse Emission Studies of PSR J1713+0747</h2>
+          <div class="pub-meta"><b>I. S. Lainez Sevilla</b>, H. Radovan, M. Lam</div>
+          <div class="pub-meta"><em>NANOGrav Fall 2026 Collaboration Meeting</em>, Texas Tech University, Lubbock, TX</div>
 
           <div class="poster-viewer">
-            <object data="Posters/POSTER_NANOGRAV_ISAC.pdf#view=Fit" type="application/pdf" aria-label="Poster PDF: NANOGrav Fall 2026 Collaboration Meeting">
+            <object data="Posters/POSTER_NANOGRAV_ISAC.pdf#toolbar=0&navpanes=0&view=Fit" type="application/pdf" aria-label="Poster PDF: NANOGrav Fall 2026 Collaboration Meeting">
               <p class="poster-fallback">Your browser can't show this PDF here.
                 <a href="Posters/POSTER_NANOGRAV_ISAC.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or
                 <a href="Posters/POSTER_NANOGRAV_ISAC.pdf" download>download it</a>.</p>
@@ -80,11 +93,11 @@
           </div>
           <div class="poster-actions">
             <a class="btn btn-primary" href="Posters/POSTER_NANOGRAV_ISAC.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-open"/></svg>
               <span data-i18n="posters.open">Open full size</span>
             </a>
             <a class="btn" href="Posters/POSTER_NANOGRAV_ISAC.pdf" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
               <span data-i18n="posters.download">Download PDF</span>
             </a>
           </div>
@@ -92,14 +105,14 @@
       </li>
 
       <li class="poster-card">
-        <div class="when">2026</div>
+        <div class="when"><time datetime="2026">2026</time></div>
         <div>
-          <span class="poster-title">Development of a Radio Pulsar Data Analysis Pipeline for Pulsar Emission Studies with the Arecibo 12-m Telescope</span>
-          <div class="pub-meta"><b>I. S. Lainez Sevilla, H. Radovan and A. Smith</b></div>
-          <div class="pub-meta">CARSE, University of Puerto Rico, Mayagüez Campus</div>
+          <h2 class="poster-title">Development of a Radio Pulsar Data Analysis Pipeline for Pulsar Emission Studies with the Arecibo 12-m Telescope</h2>
+          <div class="pub-meta"><b>I. S. Lainez Sevilla</b>, H. Radovan, A. Smith</div>
+          <div class="pub-meta"><em>CARSE</em>, University of Puerto Rico, Mayagüez Campus</div>
 
           <div class="poster-viewer">
-            <object data="Posters/Poster_CARSE_ISAC.pdf#view=Fit" type="application/pdf" aria-label="Poster PDF: CARSE, University of Puerto Rico, Mayagüez">
+            <object data="Posters/Poster_CARSE_ISAC.pdf#toolbar=0&navpanes=0&view=Fit" type="application/pdf" aria-label="Poster PDF: CARSE, University of Puerto Rico, Mayagüez">
               <p class="poster-fallback">Your browser can't show this PDF here.
                 <a href="Posters/Poster_CARSE_ISAC.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or
                 <a href="Posters/Poster_CARSE_ISAC.pdf" download>download it</a>.</p>
@@ -107,11 +120,11 @@
           </div>
           <div class="poster-actions">
             <a class="btn btn-primary" href="Posters/Poster_CARSE_ISAC.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-open"/></svg>
               <span data-i18n="posters.open">Open full size</span>
             </a>
             <a class="btn" href="Posters/Poster_CARSE_ISAC.pdf" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
               <span data-i18n="posters.download">Download PDF</span>
             </a>
           </div>
@@ -119,14 +132,14 @@
       </li>
 
       <li class="poster-card">
-        <div class="when">2026</div>
+        <div class="when"><time datetime="2026">2026</time></div>
         <div>
-          <span class="poster-title">Developing a Data Analysis Pipeline for Pulsar Emission: Observations of PSR J0437−4715 and PSR B0833−45 with the Arecibo 12 m Telescope</span>
-          <div class="pub-meta"><b>I. S. Lainez Sevilla and H. Radovan</b></div>
-          <div class="pub-meta">44th Puerto Rico Interdisciplinary Scientific Meeting, University of Puerto Rico, Río Piedras</div>
+          <h2 class="poster-title">Developing a Data Analysis Pipeline for Pulsar Emission: Observations of PSR J0437−4715 and PSR B0833−45 with the Arecibo 12 m Telescope</h2>
+          <div class="pub-meta"><b>I. S. Lainez Sevilla</b>, H. Radovan</div>
+          <div class="pub-meta"><em>44th Puerto Rico Interdisciplinary Scientific Meeting</em>, University of Puerto Rico, Río Piedras</div>
 
           <div class="poster-viewer">
-            <object data="Posters/PRIMS_Poster_Isac.pptx.pdf#view=Fit" type="application/pdf" aria-label="Poster PDF: 44th Puerto Rico Interdisciplinary Scientific Meeting">
+            <object data="Posters/PRIMS_Poster_Isac.pptx.pdf#toolbar=0&navpanes=0&view=Fit" type="application/pdf" aria-label="Poster PDF: 44th Puerto Rico Interdisciplinary Scientific Meeting">
               <p class="poster-fallback">Your browser can't show this PDF here.
                 <a href="Posters/PRIMS_Poster_Isac.pptx.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or
                 <a href="Posters/PRIMS_Poster_Isac.pptx.pdf" download>download it</a>.</p>
@@ -134,11 +147,11 @@
           </div>
           <div class="poster-actions">
             <a class="btn btn-primary" href="Posters/PRIMS_Poster_Isac.pptx.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-open"/></svg>
               <span data-i18n="posters.open">Open full size</span>
             </a>
             <a class="btn" href="Posters/PRIMS_Poster_Isac.pptx.pdf" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
               <span data-i18n="posters.download">Download PDF</span>
             </a>
           </div>
@@ -146,14 +159,14 @@
       </li>
 
       <li class="poster-card">
-        <div class="when">2026</div>
+        <div class="when"><time datetime="2026">2026</time></div>
         <div>
-          <span class="poster-title">Single-Pulse Analysis of the Millisecond Pulsar PSR J1713+0747</span>
-          <div class="pub-meta"><b>I. S. Lainez Sevilla, H. Radovan, Michael Lam</b></div>
-          <div class="pub-meta">41st Interuniversity Mathematical Sciences Research Seminar, University of Puerto Rico, Río Piedras</div>
+          <h2 class="poster-title">Single-Pulse Analysis of the Millisecond Pulsar PSR J1713+0747</h2>
+          <div class="pub-meta"><b>I. S. Lainez Sevilla</b>, H. Radovan, M. Lam</div>
+          <div class="pub-meta"><em>41st Interuniversity Mathematical Sciences Research Seminar</em>, University of Puerto Rico, Río Piedras</div>
 
           <div class="poster-viewer landscape">
-            <object data="Posters/Poster_ISAC.pdf#view=Fit" type="application/pdf" aria-label="Poster PDF: 41st Interuniversity Mathematical Sciences Research Seminar">
+            <object data="Posters/Poster_ISAC.pdf#toolbar=0&navpanes=0&view=Fit" type="application/pdf" aria-label="Poster PDF: 41st Interuniversity Mathematical Sciences Research Seminar">
               <p class="poster-fallback">Your browser can't show this PDF here.
                 <a href="Posters/Poster_ISAC.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or
                 <a href="Posters/Poster_ISAC.pdf" download>download it</a>.</p>
@@ -161,11 +174,11 @@
           </div>
           <div class="poster-actions">
             <a class="btn btn-primary" href="Posters/Poster_ISAC.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-open"/></svg>
               <span data-i18n="posters.open">Open full size</span>
             </a>
             <a class="btn" href="Posters/Poster_ISAC.pdf" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
               <span data-i18n="posters.download">Download PDF</span>
             </a>
           </div>
@@ -173,14 +186,14 @@
       </li>
 
       <li class="poster-card">
-        <div class="when">2024</div>
+        <div class="when"><time datetime="2024">2024</time></div>
         <div>
-          <span class="poster-title">Statistical Techniques for Studying Large-Scale Structure in the Universe</span>
-          <div class="pub-meta"><b>I. S. Lainez Sevilla, Francisco Linares</b></div>
-          <div class="pub-meta">Conference on Physics, Astronomy, Climate Change, and Mathematics, Copán, Honduras</div>
+          <h2 class="poster-title">Statistical Techniques for Studying Large-Scale Structure in the Universe</h2>
+          <div class="pub-meta"><b>I. S. Lainez Sevilla</b>, Francisco Linares</div>
+          <div class="pub-meta"><em>Conference on Physics, Astronomy, Climate Change, and Mathematics</em>, Copán, Honduras</div>
 
           <div class="poster-viewer landscape">
-            <object data="Posters/POSTER%20CRISCA.pdf#view=Fit" type="application/pdf" aria-label="Poster PDF: Conference on Physics, Astronomy, Climate Change, and Mathematics">
+            <object data="Posters/POSTER%20CRISCA.pdf#toolbar=0&navpanes=0&view=Fit" type="application/pdf" aria-label="Poster PDF: Conference on Physics, Astronomy, Climate Change, and Mathematics">
               <p class="poster-fallback">Your browser can't show this PDF here.
                 <a href="Posters/POSTER%20CRISCA.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or
                 <a href="Posters/POSTER%20CRISCA.pdf" download>download it</a>.</p>
@@ -188,11 +201,11 @@
           </div>
           <div class="poster-actions">
             <a class="btn btn-primary" href="Posters/POSTER%20CRISCA.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-open"/></svg>
               <span data-i18n="posters.open">Open full size</span>
             </a>
             <a class="btn" href="Posters/POSTER%20CRISCA.pdf" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
               <span data-i18n="posters.download">Download PDF</span>
             </a>
           </div>
@@ -206,7 +219,7 @@
 
 <footer class="footer footer-home">
   <a href="index.html" class="imgtxt">
-    <img src="images/Webb_spacecraft_artist_s_impression_pillars_dt Background Removed.png" width="250" alt="">
+    <img src="images/Webb_spacecraft_artist_s_impression_pillars_dt%20Background%20Removed.png" width="250" alt="">
     <span data-i18n="footer.home">Home</span>
   </a>
   <p class="footer-copy">© <span data-year>2026</span> Isac Lainez</p>
