@@ -760,6 +760,30 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
   }
 }
 
+/* Las filas internas de cada tarjeta se comparten entre tarjetas vecinas */
+.poster-grid {
+  column-gap: 32px;
+  row-gap: 0;               /* el espacio vertical pasa a margin de la tarjeta */
+}
+.poster-card {
+  display: grid;
+  grid-row: span 6;         /* año, título, autores, sede, visor, botones */
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  margin-bottom: 32px;
+}
+.poster-card > div:last-child { display: contents; }
+
+.poster-viewer {
+  margin: 0 auto;
+  align-self: start;
+}
+.poster-actions { align-self: end; }
+
+@media (max-width: 720px) {
+  .poster-card { margin-bottom: 24px; }
+}
+
 /* ---------- Responsive ---------- */
 /* Menu button on tablets and phones (the full nav needs about 1020px, more in Spanish) */
 @media (max-width: 1020px) {
