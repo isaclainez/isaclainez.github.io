@@ -711,7 +711,7 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
 
 /* ---------- PDF viewer ---------- */
 .poster-viewer {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 9 / 16;
   width: 100%;
   max-width: 300px;
   margin: auto auto 0;          /* pinned to the bottom, centered */
@@ -722,7 +722,7 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
   text-shadow: none;
 }
 .poster-viewer.landscape {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   max-width: 440px;
 }
 /* A landscape poster in a full-width card can be a bit larger */
