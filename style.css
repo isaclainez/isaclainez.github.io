@@ -711,19 +711,20 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
 
 /* ---------- PDF viewer ---------- */
 .poster-viewer {
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 3 / 4;
   width: 100%;
-  max-width: 300px;
-  margin: auto auto 0;          /* pinned to the bottom, centered */
+  max-width: 340px;
+  margin: auto auto 0;          /* pegado abajo y centrado */
   overflow: hidden;
   border: 1px solid var(--rule-strong);
   border-radius: 10px;
   background: rgba(9, 13, 27, .9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
   text-shadow: none;
 }
 .poster-viewer.landscape {
-  aspect-ratio: 16 / 9;
-  max-width: 440px;
+  aspect-ratio: 4 / 3;
+  max-width: 480px;
 }
 /* A landscape poster in a full-width card can be a bit larger */
 .poster-grid > .poster-card:last-child:nth-child(odd) .poster-viewer.landscape {
