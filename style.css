@@ -648,16 +648,28 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
 .badges img:hover { opacity: 1; }
 
 /* ---------- Posters ---------- */
+/* ============================================================
+   POSTERS PAGE
+   Replace every old .posters / .poster-* rule in style.css
+   with this whole block.
+   ============================================================ */
+
 .posters { padding-bottom: 96px; }
 
+/* Two columns. Cards in the same row always share the same height. */
 .poster-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: 1fr;              /* todas las filas con la misma altura */
   gap: 32px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* If the number of posters is odd, the last one spans both columns
+   so the grid never ends with an empty slot. */
+.poster-grid > .poster-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .poster-card {
@@ -666,22 +678,24 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
   min-width: 0;
   padding: 28px;
   border: 1px solid var(--rule);
-  border-radius: 14px;
+  border-radius: 12px;
   background: var(--panel);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  transition: border-color .2s ease;
 }
-.poster-card:hover {
+.poster-card:hover,
+.poster-card:focus-within {
   border-color: var(--rule-strong);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
 }
-
-/* Se desactiva el ancho completo para que todas las tarjetas queden iguales */
-.poster-card.wide { grid-column: auto; }
 
 .poster-card .when { margin-bottom: 8px; }
-.poster-card > div:last-child { display: flex; flex: 1; flex-direction: column; }
+
+/* The content block fills the card, so the viewer and buttons
+   always end up at the bottom and line up across each row. */
+.poster-card > div:last-child {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
 
 .poster-title {
   display: block;
@@ -689,26 +703,46 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
   color: var(--ink);
   font-family: var(--serif);
   font-size: clamp(1.15rem, 1.6vw, 1.4rem);
-  line-height: 1.25;
+  line-height: 1.3;
 }
-.poster-title + .pub-meta + .pub-meta { margin-bottom: 20px; }
 
-.poster-viewer,
-.poster-viewer.landscape {
+/* Space between the venue line and the viewer */
+.poster-title + .pub-meta + .pub-meta { margin-bottom: 24px; }
+
+/* ---------- PDF viewer ---------- */
+.poster-viewer {
   aspect-ratio: 3 / 4;
   width: 100%;
-  max-width: 300px;                 /* tamaño del visor */
-  margin: auto auto 0;              /* pegado abajo y centrado */
+  max-width: 300px;
+  margin: auto auto 0;          /* pinned to the bottom, centered */
   overflow: hidden;
   border: 1px solid var(--rule-strong);
   border-radius: 10px;
   background: rgba(9, 13, 27, .9);
   text-shadow: none;
 }
-.poster-viewer object { display: block; width: 100%; height: 100%; }
+.poster-viewer.landscape {
+  aspect-ratio: 4 / 3;
+  max-width: 440px;
+}
+/* A landscape poster in a full-width card can be a bit larger */
+.poster-grid > .poster-card:last-child:nth-child(odd) .poster-viewer.landscape {
+  max-width: 560px;
+}
 
-.poster-fallback { padding: 28px 20px; color: var(--ink-2); text-align: center; }
+.poster-viewer object {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
+.poster-fallback {
+  padding: 28px 20px;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+/* ---------- Buttons ---------- */
 .poster-actions {
   display: flex;
   flex-wrap: wrap;
@@ -717,10 +751,17 @@ blockquote cite { display: block; margin-top: 12px; font-family: var(--sans); fo
   margin-top: 20px;
 }
 
+/* ---------- Mobile ---------- */
 @media (max-width: 720px) {
-  .poster-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .poster-grid { grid-template-columns: 1fr; gap: 24px; }
   .poster-card { padding: 22px; }
+  .poster-viewer,
+  .poster-viewer.landscape,
+  .poster-grid > .poster-card:last-child:nth-child(odd) .poster-viewer.landscape {
+    max-width: 100%;
+  }
 }
+
 /* ---------- Responsive ---------- */
 /* Menu button on tablets and phones (the full nav needs about 1020px, more in Spanish) */
 @media (max-width: 1020px) {
